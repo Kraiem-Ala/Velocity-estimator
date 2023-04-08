@@ -1,0 +1,48 @@
+<launch>
+
+<node pkg="obstacle_velocity" type="obstacles" name="robot1_obstacles" respawn="true" output="screen">
+    <param name = "robot_name" value = "robot1" />
+</node>
+
+<node pkg="costmap_converter" type="standalone_converter" name="robot1_converter" respawn="true" output="screen">
+    
+    <param name = "converter_plugin" value = "costmap_converter::CostmapToPolygonsDBSMCCH"/>
+    <param name = "costmap_topic" value = "/robot1/cropped_map"/>
+    <param name = "costmap_update_topic" value = "/robot1/cropped_map_update"/>
+    <param name = "obstacles_topic" value = "/robot1/critic_obstacles"/>
+    <param name = "polygon_marker_topic" value = "/robot1/critic_polygons"/>
+    <param name = "odom_topic" value = "/odom"/>
+    <param name = "occupied_min_value" value = "100"/>
+    <rosparam file="$(find obstacle_velocity)/cfg/converter_params.yaml" command="load" />
+
+</node>
+
+<node pkg="obstacle_velocity" type="velocity.py" name="robot1_velocities" respawn="true" output="screen">
+    <param name = "robot_name" value = "robot1" />
+</node>
+
+<node pkg="obstacle_velocity" type="obstacles" name="robot2_obstacles" respawn="true" output="screen">
+    <param name = "robot_name" value = "robot2" />
+</node>
+
+<node pkg="costmap_converter" type="standalone_converter" name="robot2_converter" respawn="true" output="screen">
+    
+    <param name = "converter_plugin" value = "costmap_converter::CostmapToPolygonsDBSMCCH"/>
+    <param name = "costmap_topic" value = "/robot2/cropped_map"/>
+    <param name = "costmap_update_topic" value = "/robot2/cropped_map_update"/>
+    <param name = "obstacles_topic" value = "/robot2/critic_obstacles"/>
+    <param name = "polygon_marker_topic" value = "/robot2/critic_polygons"/>
+    <param name = "odom_topic" value = "/robot2/Uqtr_Robot/diff_drive_controller/odom"/>
+    <param name = "occupied_min_value" value = "100"/>
+    <rosparam file="$(find obstacle_velocity)/cfg/converter_params.yaml" command="load" />
+
+</node>
+
+<node pkg="obstacle_velocity" type="velocity.py" name="robot2_velocities" respawn="true" output="screen">
+    <param name = "robot_name" value = "robot2" />
+</node>
+
+<!--node pkg="obstacle_velocity" type="filter" name="simulation_logger" output="screen">
+</node-->
+
+</launch> 

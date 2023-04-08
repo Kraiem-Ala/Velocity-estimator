@@ -1,0 +1,5 @@
+<library path="lib/libcustom_layer">
+  <class type="custom_layer_namespace::Customlayer" base_class_type="costmap_2d::Layer">
+  <description>Demo Layer that adds a point 1 meter in front of the robot</description>
+</class>
+</library>

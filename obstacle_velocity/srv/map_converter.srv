@@ -1,0 +1,4 @@
+nav_msgs/OccupancyGrid map 
+nav_msgs/Odometry
+---
+costmap_converter/ObstacleArrayMsg obstacles 

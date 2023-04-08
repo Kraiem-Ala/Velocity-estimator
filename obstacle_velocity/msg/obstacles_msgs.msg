@@ -1,0 +1,6 @@
+std_msgs/Header header
+obstacle_velocity/obstacle[] obstacles
+geometry_msgs/Point robot_odometry
+float64 robot_orientation
+float64 acceleration
+float64 velocity

@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>915</width>
+    <height>758</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-60</x>
+      <y>-20</y>
+      <width>1011</width>
+      <height>771</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1011</width>
+      <height>771</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../../../../Downloads/Abstract-PC-Wallpaper.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>30</y>
+      <width>661</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>215</red>
+          <green>0</green>
+          <blue>153</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>215</red>
+          <green>0</green>
+          <blue>153</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>190</red>
+          <green>190</green>
+          <blue>190</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>ROBOT 1 Speed</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <widget class="QwtDial" name="speed_dial">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>331</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="upperBound">
+      <double>1.000000000000000</double>
+     </property>
+     <property name="scaleStepSize">
+      <double>0.100000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.600000000000000</double>
+     </property>
+     <property name="stepAlignment">
+      <bool>true</bool>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+     <property name="tracking">
+      <bool>true</bool>
+     </property>
+     <property name="lineWidth">
+      <number>4</number>
+     </property>
+     <property name="frameShadow">
+      <enum>QwtDial::Sunken</enum>
+     </property>
+     <property name="mode">
+      <enum>QwtDial::RotateNeedle</enum>
+     </property>
+     <property name="origin">
+      <double>110.000000000000000</double>
+     </property>
+     <property name="maxScaleArc">
+      <double>320.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="speed_lcd">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>220</y>
+       <width>64</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>215</red>
+           <green>0</green>
+           <blue>153</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>215</red>
+           <green>0</green>
+           <blue>153</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>190</red>
+           <green>190</green>
+           <blue>190</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <property name="smallDecimalPoint">
+      <bool>true</bool>
+     </property>
+     <property name="digitCount">
+      <number>5</number>
+     </property>
+     <property name="value" stdset="0">
+      <double>0.600000000000000</double>
+     </property>
+     <property name="intValue" stdset="0">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Danger_1">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>90</y>
+       <width>91</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../../../../../Downloads/danger-icon-png-Images.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Good_1">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>210</y>
+       <width>91</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../../../../../Downloads/clipart289210.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>50</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>80</red>
+           <green>247</green>
+           <blue>247</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>80</red>
+           <green>247</green>
+           <blue>247</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>190</red>
+           <green>190</green>
+           <blue>190</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Conflict Zone</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>370</y>
+      <width>661</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>215</red>
+          <green>0</green>
+          <blue>153</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>215</red>
+          <green>0</green>
+          <blue>153</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>190</red>
+          <green>190</green>
+          <blue>190</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>ROBOT 2 Speed</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <widget class="QwtDial" name="speed_dial_2">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>331</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="upperBound">
+      <double>1.000000000000000</double>
+     </property>
+     <property name="scaleStepSize">
+      <double>0.100000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.500000000000000</double>
+     </property>
+     <property name="stepAlignment">
+      <bool>true</bool>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+     <property name="tracking">
+      <bool>true</bool>
+     </property>
+     <property name="lineWidth">
+      <number>4</number>
+     </property>
+     <property name="frameShadow">
+      <enum>QwtDial::Sunken</enum>
+     </property>
+     <property name="mode">
+      <enum>QwtDial::RotateNeedle</enum>
+     </property>
+     <property name="origin">
+      <double>110.000000000000000</double>
+     </property>
+     <property name="maxScaleArc">
+      <double>320.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="speed_lcd_2">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>220</y>
+       <width>64</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>215</red>
+           <green>0</green>
+           <blue>153</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>215</red>
+           <green>0</green>
+           <blue>153</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>190</red>
+           <green>190</green>
+           <blue>190</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <property name="smallDecimalPoint">
+      <bool>true</bool>
+     </property>
+     <property name="digitCount">
+      <number>3</number>
+     </property>
+     <property name="segmentStyle">
+      <enum>QLCDNumber::Filled</enum>
+     </property>
+     <property name="value" stdset="0">
+      <double>0.500000000000000</double>
+     </property>
+     <property name="intValue" stdset="0">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Good_2">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>210</y>
+       <width>91</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../../../../../Downloads/clipart289210.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Danger_2">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>100</y>
+       <width>91</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../../../../../Downloads/danger-icon-png-Images.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>40</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>80</red>
+           <green>247</green>
+           <blue>247</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>80</red>
+           <green>247</green>
+           <blue>247</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>190</red>
+           <green>190</green>
+           <blue>190</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Conflict Zone</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QwtDial</class>
+   <extends>QWidget</extends>
+   <header>qwt_dial.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

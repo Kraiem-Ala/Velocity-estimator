@@ -1,0 +1,38 @@
+<?xml version="1.0"?> 
+<sdf version="1.4">
+  <world name="default">
+
+    <!-- Ground Plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <model name="cylinder">
+      <pose>0 0 0.5 1.57 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>0.3</radius>
+              <length>1.2</length>
+            </cylinder>
+        </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>0.3</radius>
+              <length>1.2</length>
+            </cylinder>
+        </geometry>
+        </visual>
+      </link>
+      <plugin name="model_move_plugin" filename="libmodel_move_plugin.so"/>
+    </model>        
+  </world>
+</sdf>

@@ -1,0 +1,4 @@
+    cluster_max_distance: 0.6
+    cluster_min_pts: 3
+    cluster_max_pts: 40
+    convex_hull_min_pt_separation: 0.2
